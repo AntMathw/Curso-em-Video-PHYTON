@@ -132,3 +132,73 @@ print('Um funcionário que ganhava R${:.2f}, com aumento de 15%, passa a receber
 salario = float(input('Digite o salário do funcionário? '))
 aumento = salario + (salario * 15 / 100)
 print('Um funcionário que ganhava R${:.2f}, com aumento de 15%, passa a receber R${:.2f}'.format(salario, aumento))
+
+#DESAFIO 014 DO CURSO EM VÍDEO PHYTON
+
+#Primeira Forma
+c = float(input('Informa a temperatura em Celsius: '))
+F = (c * 1.8 + 32)
+print('A temperatura de {} Celsius, em fahrenheit é {}'.format(c, F))
+
+#Segunda Forma
+c = float(input('Informa a temperatura em Celsius: '))
+print('A temperatura de {} Celsius, em fahrenheint é {}'.format(c, c * 1.8 + 32))
+
+#DESAFIO 015 DO CURSO EM VÍDEO PHYTON
+
+#Primeira Forma
+dias = int(input('Quantos dias alugados? '))
+km = float(input('Quantos Km rodados? '))
+print('O total a pagar é R${:.2f}'.format(dias * 60 + km * 0.15))
+
+#Segunda Forma com variável
+dias = int(input('Quantos dias alugados? '))
+km = float(input('Quantos Km rodados? '))
+total = dias * 60 + km * 0.15
+print('O total a pagar é R${:.2f}'.format(total))
+
+#DESAFIO 016 DO CURSO EM VÍDEO PHYTON
+
+from math import floor
+numero = float(input('Digite um valor: '))
+print('O valor digitado foi {} e a sua porção inteira é {}'.format(numero, floor(numero)))
+
+#DESAFIO 017 DO CURSO EM VÍDEO PHYTON
+
+#Primeira Forma
+from math import sqrt
+
+cop = float(input('Digite o valor do cateto oposto: '))
+cad = float(input('Digite o valor do cateto adjacente: '))
+hip = cop**2 + cad**2
+print('A hipotenusa vai medir {:.2f}'.format(sqrt(hip)))
+
+#Segunda Forma 3 linha de código
+
+import math
+cop = float(input('Digite o valor do cateto oposto: '))
+cad = float(input('Digite o valor do cateto adjacente: '))
+print('A hipotenusa vai medir {:.2f}'.format(math.hypot(cop, cad)))
+
+#DESAFIO 018 DO CURSO EM VÍDEO PHYTON
+
+#Primeira Forma
+from math import  radians, sin, cos, tan
+
+angulo = int(input('Digite o angulo: '))
+seno = sin(radians(angulo))
+cosseno = cos(radians(angulo))
+tangente = tan(radians(angulo))
+print('O angulo de {} seu SENO é {:.2f}'.format(angulo, seno))
+print('O angulo de {} seu COSSENO é {:.2f}'.format(angulo, cosseno))
+print('O anmulo de {} sua TANGENTE é {:.2f}'.format(angulo, tangente))
+
+#Segunda Forma com 5 linha de Códio
+import math
+
+angulo = int(input('Digite o angulo: '))
+seno = math.sin(math.radians(angulo))
+cos = math.cos(math.radians(angulo))
+tan = math.tan(math.radians(angulo))
+print('O angulo de {} seu SENO É {:.2f} \nO angulo de {} seu COSSENO é {:.2f}\nO angulo {} sua TANGENTE é {:.2f}'.format(angulo, seno, angulo, cos, angulo, tan))
+
