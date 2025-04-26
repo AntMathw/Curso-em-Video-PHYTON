@@ -223,3 +223,155 @@ a4 = str(input('Digite o quarto aluno: '))
 lista = [a1, a2, a3, a4]
 shuffle(lista)
 print('A ordem de apresentação é \n{}'.format(lista))
+
+#DESAFIO 021 DO CURSO EM VÍDEO PHYTON
+
+from pygame import mixer
+
+mixer.init()
+mixer.music.load('bby.mp3')
+mixer.music.play()
+input()
+mixer.event.wait()
+
+#DESAFIO 022 DO CURSO EM VÍDEO PHYTON
+
+nome = str(input('Digite seu nome completo: '))
+print('Analisando seu nome...')
+print('Seu nome em maiusculo é {}'.format(nome.upper()))
+print('Seu nome em minusculo é {}'.format(nome.lower()))
+print('Seu nome tem ao todo {} letras'.format(len(nome) - nome.count(' ')))
+print('Seu primeiro nome {} tem {} letras'.format(nome.split()[0], len(nome.split()[0])))
+
+#DESAFIO 023 DO CURSO EM VÍDEO
+
+numero = int(input('Informe um número: '))
+print('Analisando esse numero {}'.format(numero))
+print('Unidade: {}'.format(numero // 1 % 10))
+print('Dezena: {}'.format(numero // 10 % 10))
+print('Centena: {}'.format(numero // 100 % 10))
+print('Milhar: {}'.format(numero // 1000 % 10))
+
+#DESAFIO 024 DO CURSO EM VÍDEO
+
+cidade = str(input('Em que cidade você nasceu? ')).strip()
+print('{}'.format(cidade[:5].upper() == 'SANTO'))
+
+#DESAFIO 025 DO CURSO EM VÍDEO
+
+nome = str(input('Qual seu nome completo? ')).upper().strip()
+print('Seu nome tem SILVA? {}'.format('SILVA' in nome))
+
+#DESAFIO 026 DO CURSO EM VÍDEO
+
+frase = str(input('Digite uma frase: ')).strip()
+print('A letra "A" aparece {} vezes na frase "{}".'.format(frase.lower().count('a'), frase))
+print('A letra "A" aparece pela primeira vez na posição {}'.format(frase.lower().find('a')+1))
+print('A letra "A" aparece pela última vez na posição {}'.format(frase.lower().rfind('a')+1))
+
+#DESAFIO 027 DO CURSO EM VÍDEO
+
+nome = str(input('Digite seu nome completo: ')).strip()
+print('Prazer em te conhecer! ')
+dividido = nome.split()
+print('Seu primeiro nome é: {}'.format(dividido[0]))
+print('Seu ultimo nome é: {}'.format(dividido[-1]))
+
+#DESAFIO 028 DO CURSO EM VÍDEO
+
+import random
+from time import sleep
+
+numero = random.randint(0, 5)
+print('Vou pensar em um numero entre 0 e 5. Tente adivinhar...')
+escolha = int(input('Em que número eu pensei? '))
+print('PROCESSANDO...')
+sleep(3)
+if numero == escolha:
+    print('PARABÉNS! VOCÊ CONSEGUIU ME VENCER! ')
+else:
+    print('GANHEI! Eu pensei no numero {} e não no {}'.format(numero, escolha))
+
+#DESAFIO 029 DO CURSO EM VÍDEO
+
+elocidade = float(input('Qual a velocidade do carro? '))
+
+if velocidade > 80:
+    print('Você será multado por R${:.2f}, por estar {:.0f}Km/h acima dos 80KM/h'.format((velocidade - 80) * 7, velocidade - 80))
+else:
+    print('Tenha um bom dia! Diriga com Segurança')
+
+#DESAFIO 030 DO CURSO EM VÍDEO
+
+numero = int(input('Digite um numero qualquer: '))
+
+if numero % 2 == 0:
+    print('Esse numero {} é PAR'.format(numero))
+else:
+    print('Esse número {} é IMPAR'.format(numero))
+
+#DESAFIO 031 DO CURSO EM VÍDEO
+
+viagem = float(input('Qual a distância da viagem? '))
+print('Você está preste a fazer uma viagem de {}KM'.format(viagem))
+
+if viagem  <= 200:
+    print('O preço da sua passagem será de R${:.2f}'.format(viagem * 0.50))
+else:
+    print('O preço da sua passagem será de R${:.2f}'.format(viagem * 0.45))
+
+#DESAFIO 032 DO CURSO EM VÍDEO
+
+from datetime import date
+
+ano = int(input('Que ano quer analisar? Coloque 0 para analisar o ano atual: '))
+
+if ano == 0:
+  ano = date.today().year
+
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+    print('O ano de {} é bissexto'.format(ano))
+else:
+    print('O ano de {} não é bissexto'.format(ano))
+
+#DESAFIO 033 DO CURSO EM VÍDEO
+
+n1 = float(input('Digite o primeiro valor: '))
+n2 = float(input('Digite o segundo valor: '))
+n3 = float(input('Digite o terceiro valor: '))
+
+if n1 > n2 and n1 > n3:
+    print('O maior valor é {}'.format(n1))
+if n2 > n1 and n2 > n3:
+    print('O maior valor é {}'.format(n2))
+if n3 > n1 and n3 > n2:
+    print('O maior valor é {}'.format(n3))
+elif n1 < n2 and n1 < n3:
+    print('O menor valor é {}'.format(n1))
+elif n2 < n1 and n2 < n3:
+    print('O menor valor é {}'.format(n2))
+elif n3 < n1 and n3 < n2:
+    print('O menor valor é {}'.format(n3))
+
+#DESAFIO 034 DO CURSO EM VÍDEO
+
+salario = float(input('Qual o valor do salário do funcionário? R$ '))
+
+if salario > 1250.00:
+    print('Quem ganhava R${}, passa a ganhar R${}'.format(salario, salario * 1.10))
+else:
+    print('Quem ganhava R${}, passa a ganhar R${}'.format(salario, salario * 1.15))
+
+#DESAFIO 035 DO CURSO EM VÍDEO
+
+r1 = float(input('Digite o comprimento da primeira reta: '))
+r2 = float(input('Digite o comprimento da segunda reta: '))
+r3 = float(input('Digite o comprimento da terceira reta: '))
+if r1 + r2 > r3 and r1 + r3 > r2 and r2 + r3 > r1:
+    print('O triângulo existe.')
+else:
+    print('O triângulo não existe')
+
+
+
+
