@@ -202,3 +202,24 @@ cos = math.cos(math.radians(angulo))
 tan = math.tan(math.radians(angulo))
 print('O angulo de {} seu SENO É {:.2f} \nO angulo de {} seu COSSENO é {:.2f}\nO angulo {} sua TANGENTE é {:.2f}'.format(angulo, seno, angulo, cos, angulo, tan))
 
+#DESAFIO 019 DO CURSO EM VÍDEO PHYTON
+
+import random
+
+a1 = str(input('Digite o primeiro aluno: '))
+a2 = str(input('Digite o segundo aluno: '))
+a3 = str(input('Digite o terceiro aluno: '))
+a4 = str(input('Digite o quarto aluno: '))
+lista = [a1, a2, a3, a4]
+print('O aluno escolhido foi {}'.format(random.choice(lista)))
+
+#DESAFIO 020 DO CURSO EM VÍDEO PHYTON
+
+from random import shuffle
+a1 = str(input('Digite o primeiro aluno: '))
+a2 = str(input('Digite o segundo aluno: '))
+a3 = str(input('Digite o terceiro aluno: '))
+a4 = str(input('Digite o quarto aluno: '))
+lista = [a1, a2, a3, a4]
+shuffle(lista)
+print('A ordem de apresentação é \n{}'.format(lista))
