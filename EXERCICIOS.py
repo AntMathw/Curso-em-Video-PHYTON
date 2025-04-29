@@ -372,6 +372,90 @@ if r1 + r2 > r3 and r1 + r3 > r2 and r2 + r3 > r1:
 else:
     print('O triângulo não existe')
 
+#DESAFIO 036 DO CURSO EM VÍDEO
+
+casa = float(input('Qual é o valor da casa? '))
+salario = float(input('Salário do comprador?  '))
+ano = int(input('Quantos anos ele vai pagar? '))
+emprestimo = casa / (ano * 12)
+pmensal = emprestimo * 100 / salario
+print('Para pagar uma casa de R${} em {:.0f} anos, a prestação será de R${:.2f}'.format(casa, ano, emprestimo, pmensal))
+
+if emprestimo <= 0.30 * salario:
+    print('\033[1;32mEmpréstimo CONCEDIDO!\033[m ')
+elif emprestimo > 0.30 * salario:
+    print('\033[1;31mEmpréstimo NEGADO!\033[m ')
+
+
+#DESAFIO 037 DO CURSO EM VÍDEO
+
+numero = int(input('Digite um número para ser convertido: '))
+escolhido = int(input('Escolha uma conversão: \n[ 1 ]CONVERSOR NÚMERO BINARIO \n[ 2 ]CONVERSOR NÚMERO OCTAL'
+                     '\n[ 3 ]CONVERSOR NÚMERO HEXADECIMAL\nDigite aqui: '))
+if escolhido == 1:
+    print(int(input('A conversão do número {} para binário é {}'.format(numero, bin(numero)[2:]))))
+elif escolhido == 2:
+    print(int(input('A conversão do numero {} para octal é {}'.format(numero, oct(numero)[2:]))))
+elif escolhido == 3:
+    print(int(input('A conversão do número {} para hexadecimal é {}'.format(numero, hex(numero)[2:]))))
+
+#DESAFIO 038 DO CURSO EM VÍDEO
+
+num1 = int(input('Digite primero valor: '))
+num2 = int(input('Digite segundo valo: '))
+if num1 > num2:
+    print('O primeiro valor é maior')
+elif num2 > num1:
+    print('O segundo valor é maior')
+
+
+#DESAFIO 039 DO CURSO EM VÍDEO
+
+from datetime import date
+
+nascimento = int(input('Em que ano você nasceu? '))
+hoje = date.today().year
+
+if nascimento == hoje:
+    print('O ano de {}, você obrigatoriamente tem que se alistar! '.format(date.today().year))
+elif hoje - nascimento > 18:
+    print('O ano de {}, alistamento ja ocorreu, mas se não se alistou, FAÇA!'.format(nascimento + 18))
+else:
+    print('O seu alistamento ainda não chegou. Ele vai acontecer em {}'.format(nascimento + 18))
+
+#DESAFIO 040 DO CURSO EM VÍDEO
+
+prova1 = float(input('Nota da primeia prova: '))
+prova2 = float(input('Nota da segunda prova: '))
+resultado = (prova1 + prova2) / 2
+
+if resultado >= 7:
+    print('A nota {} e {}, a média do aluno vai ser {}\n\033[1;36mAPROVADO\033[m'.format(prova1, prova2, resultado))
+elif resultado < 5.0:
+    print('A nota {} e {}, a média do aluno vai ser {}\n\033[1;31mREPROVADO\033[m'.format(prova1, prova2, resultado))
+elif resultado == 5.9 or 6.9:
+    print('A nota {} e {}, a média do aluno vai ser {}\nRECUPERAÇÃO'.format(prova1, prova2, (resultado)))
+
+#DESAFIO 041 DO CURSO EM VÍDEO
+
+from datetime import date
+
+idade = int(input('Digite sua idade ou ano de nascimento: '))
+anoatual = date.today().year
+subtrai = anoatual - idade
+
+if idade <= 9 or subtrai <= 9:
+    print('Categoria será MIRIM.')
+elif idade <= 14 or subtrai <= 14:
+    print('Cateoria será INFANTIL.')
+elif idade <= 19 or subtrai <= 19:
+    print('Categoria será JÚNIOR.')
+elif idade <= 25 or subtrai <= 25:
+    print('Categoria será SÊNIOR.')
+elif idade > 25:
+    print('Categoria será MASTER.')
+
+
 
 
 
