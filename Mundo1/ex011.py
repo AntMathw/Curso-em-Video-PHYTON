@@ -1,12 +1,5 @@
-#DESAFIO 012 DO CURSO EM VÍDEO PHYTON
+#DESAFIO 010 DO CURSO EM VÍDEO PHYTON
 
-
-  #Primeira Forma mais direto
-preco = float(input('Qual é o preço do produto? '))
-print('O produto que custava R${:.2f}, na promoção com desconto 5% vai custar R${:.2f}'.format(preco, preco - (preco * 5 / 100)))
-
-  #Segunda Forma com a variavel desconto
-preco = float(input('Qual é o preço do produto? '))
-desconto = preco - (preco * 5 / 100)
-print('O produto que custava R${:.2f}, na promoção com desconto de 5% vai custar R${:.2f}'.format(preco, desconto))
-
+carteira = float(input('Quanto dinheiro você tem na carteira?: '))
+print('Com R${:.2f} você pode comprar U${:.2f}'.format(carteira, carteira / 5.69))
+print('Com R${:.2f} você pode comprar Euro${:.2f}'.format(carteira, carteira / 6.49))
