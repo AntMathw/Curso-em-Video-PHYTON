@@ -15,6 +15,7 @@ sleep(1)
 print('-=-' * 20)
 print('O jogador escolheu {}'.format(jogador))
 print('O computador escolheu {}'.format(computador))
+print('-=-' * 20)
 
 if computador == 1:
     if jogador == 2:
