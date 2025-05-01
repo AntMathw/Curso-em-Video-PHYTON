@@ -1,4 +1,4 @@
-#DESAFIO 044 DO CRUSO EM VÍDEO PHYTON
+#DESAFIO 044 DO CURSO EM VÍDEO PHYTON
 
 print('{:.^40}'.format(' Lojas Sousa '))
 preco = float(input('Digite o preço do produto: '))
