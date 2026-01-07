@@ -1,17 +1,6 @@
 #DESAFIO 003 DO CURSO EM VÍDEO PHYTON
 
-num1 = int(input('Digite um valor: '))
-num2 = int(input('Digite outro valor:: '))
-print('A soma entre {} e {} é igual a {}'.format(num1, num2, num1+num2))
-
-#MAIS UM EXEMPLO
-
-# Este programa solicita ao usuário dois valores inteiros,
-# calcula a soma entre eles e exibe o resultado formatado.
-
-# 1. Solicita o primeiro valor ao usuário.
-# A função 'input()' sempre retorna uma string, por isso usamos 'int()'
-# para converter a entrada para um número inteiro.
+#Socilita o prmeiro valor ao usuário
 num1 = int(input('👉 Por favor, digite o primeiro número inteiro: '))
 
 # 2. Solicita o segundo valor ao usuário.
