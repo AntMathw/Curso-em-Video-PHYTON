@@ -1,6 +1,6 @@
 #DESAFIO 003 DO CURSO EM VÍDEO PHYTON
 
-#Socilita o prmeiro valor ao usuário
+#1. Socilita o primeiro valor ao usuário
 num1 = int(input('👉 Por favor, digite o primeiro número inteiro: '))
 
 # 2. Solicita o segundo valor ao usuário.
